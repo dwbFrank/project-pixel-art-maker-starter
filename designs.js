@@ -22,9 +22,9 @@ $("#sizePicker").submit(function makeGrid(event) {
         table.append(rowPrint);
         let colPrint;
         for (let col = 0; col < inputWidth; col++) {
-            colPrint = "<td id=\"row" + row + "" + col + "\" class=\"" + "col\">" + "</tr>"
+            colPrint = "<td id=\"row" + row + "-" + col + "\" class=\"" + "cell\">" + "</tr>"
             $("#" + row).append(colPrint);
-            $("#" + "row" + row + "" + col).click(function click(event) {
+            $("#" + "row" + row + "-" + col).click(function click(event) {
                 let clicked;
                 clicked = $(this).hasClass("clicked");
                 if (clicked) {
@@ -39,6 +39,6 @@ $("#sizePicker").submit(function makeGrid(event) {
 
     }
     $(".row").css({ "height": "40px" });
-    $(".col").css({ "width": "40px" });
+    $(".cell").css({ "width": "40px" });
 });
 
